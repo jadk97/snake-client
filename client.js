@@ -15,6 +15,7 @@ const connect = function () {
   conn.on("connect", () => {
     if(net.Socket){console.log("Successfully connected to the game server");}
     conn.write("Name: Jad");
+  //  setInterval( () => { setTimeout( () => { conn.write("Move: up");}, 50);}, 51);
   });
   return conn;
 }

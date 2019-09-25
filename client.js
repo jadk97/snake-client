@@ -2,7 +2,7 @@ const net = require('net');
 
 const connect = function () {
   const conn = net.createConnection({
-    host: '172.46.2.204',
+    host: '172.46.0.144',
     port: 50541
   });
 
@@ -15,7 +15,6 @@ const connect = function () {
   conn.on("connect", () => {
     if (net.Socket) { console.log("Successfully connected to the game server"); }
     conn.write("Name: Jad");
-    //  setInterval( () => { setTimeout( () => { conn.write("Move: up");}, 50);}, 51);
   });
   return conn;
 }

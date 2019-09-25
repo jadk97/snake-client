@@ -13,13 +13,16 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    if(net.Socket){console.log("Successfully connected to the game server");}
+    if (net.Socket) { console.log("Successfully connected to the game server"); }
     conn.write("Name: Jad");
-  //  setInterval( () => { setTimeout( () => { conn.write("Move: up");}, 50);}, 51);
+    //  setInterval( () => { setTimeout( () => { conn.write("Move: up");}, 50);}, 51);
   });
   return conn;
 }
 
 
 console.log('Connecting ...');
-module.exports = connect;
+module.exports =
+  {
+    connect
+  };
